@@ -13,6 +13,15 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join("/", "media")
+
+LOGIN_URL = '/usuarios/login/'  # Ruta personalizada para login
+LOGIN_REDIRECT_URL = '/usuarios/profile/'  # Redirigir después del login
+
+AUTH_USER_MODEL = 'usuarios.Usuario'  # Asegúrate que esto sea correcto
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -35,13 +44,15 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'homepage',
+    'usuarios',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'homepage'
+    
 ]
 
 MIDDLEWARE = [
