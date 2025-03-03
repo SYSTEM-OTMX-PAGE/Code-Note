@@ -22,8 +22,6 @@ MEDIA_ROOT = os.path.join("/", "media")
 LOGIN_URL = '/usuarios/login/'  # Ruta personalizada para login
 LOGIN_REDIRECT_URL = '/usuarios/profile/'  # Redirigir después del login
 
-AUTH_USER_MODEL = 'usuarios.Usuario'  # Asegúrate que esto sea correcto
-
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,7 +35,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
